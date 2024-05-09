@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import logo from "../../../../assets/logo.jpg"
-import user1 from "../../../../assets/user.png"
+import logo from "../../../Photos/logo.jpg"
+import user1 from "../../../Photos/user.png"
 import { useContext } from "react";
 import { authContext } from "../../provider/AuthProvider";
 import { Tooltip } from 'react-tooltip'
@@ -12,11 +12,9 @@ const Navbar = () => {
 
     const navLinks = <>
         <li><a><Link to='/'>Home</Link> </a></li>
-        <li><a><Link to='/about'>About</Link> </a></li>
-        <li><a><Link to='/service'>Services</Link> </a></li>
-        <li><a><Link to='/blog'>Blog</Link> </a></li>
-        <li><a><Link to='/contact'>Content</Link> </a></li>
-
+        <li><a><Link to='/assignments'>Assignments</Link> </a></li>
+        <li><a><Link to='/createAssignment'>Create Assignment</Link> </a></li>
+        <li><a><Link to='/pendingAssignment'>Pending Assignments</Link> </a></li>
     </>
 
 const handleSignOut = () => {
@@ -64,7 +62,7 @@ const handleSignOut = () => {
                                 </div>
                                 <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
 
-                                    <Link to='/profile'> <li><a>Profile</a></li> </Link>
+                                    <Link to='/attemptAssignment'> <li><a>Attempt Assignment</a></li> </Link>
                                     <li onClick={handleSignOut}><a>Logout</a></li>
                                 </ul>
                             </div>

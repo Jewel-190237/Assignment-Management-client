@@ -6,7 +6,7 @@ import { TiUserAdd } from "react-icons/ti";
 import { FaSignInAlt } from "react-icons/fa";
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.css';
-import photo from "../../assets/sign.jpg"
+import photo from "../../assets/Photos/sign.jpg"
 import { authContext } from "../Components/provider/AuthProvider";
 // import UseTitle from "../layout/UseTitle";
 

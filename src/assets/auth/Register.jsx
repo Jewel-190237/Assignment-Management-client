@@ -6,7 +6,7 @@ import 'sweetalert2/dist/sweetalert2.css';
 import { useContext } from "react";
 // import UseTitle from "../layout/UseTitle";
 import { authContext } from "../Components/provider/AuthProvider";
-import photo from "../../assets/sign.jpg"
+import photo from "../../assets/Photos/sign.jpg"
 
 
 
