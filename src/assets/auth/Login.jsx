@@ -4,12 +4,12 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from 'react-icons/fa';
 import { TiUserAdd } from "react-icons/ti";
 import { FaSignInAlt } from "react-icons/fa";
-
-
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.css';
+import photo from "../../assets/sign.jpg"
 import { authContext } from "../Components/provider/AuthProvider";
 // import UseTitle from "../layout/UseTitle";
+
 
 
 
@@ -96,27 +96,29 @@ const Login = () => {
 
     return (
         <div>
-            <div className=" bg-base-300 rounded-2xl mb-8">
-                <div className="hero-content flex-col ">
-                    <div className="text-center ">
+            <div className=" rounded-2xl mb-8">
+            <h1 className="text-4xl text-center font-bold text-green-600 mt-4">Login Here</h1>
+                <div className="hero-content flex gap-8">
+                    <div className="text-center flex-1 ">
+                        <img className="rounded-2xl w-full" src={photo} alt="" />
                     </div>
-                    <div className="md:w-1/3 w-full  shadow-2xl bg-base-100 rounded-2xl">
-                    <h1 className="text-2xl text-center font-bold text-green-600 mt-4">Login Here</h1>
+                    <div className="md:w-5/12 w-full rounded-2xl">
+                        
                         <form onSubmit={handleSignIn} className="card-body rounded-2xl">
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Email</span>
+                                    <span className="label-text font-bold">Email</span>
                                 </label>
-                                <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+                                <input type="email" name="email" placeholder="Enter Your Email" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Password</span>
+                                    <span className="label-text font-bold">Password</span>
                                 </label>
                                 <div className="flex">
                                     <input
                                         type={showPassword ? "text" : "password"}
-                                        name="password" placeholder="Password" className="input w-full border-slate-300 pr-16" required />
+                                        name="password" placeholder="Enter Your Password" className="input w-full border-slate-300 pr-16" required />
                                     <span onClick={() => setShowPassword(!showPassword)} className="mt-4 -ml-5 ">
                                         {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
                                     </span>
@@ -134,10 +136,10 @@ const Login = () => {
                                 <p className="text-center"> or,  Continue with</p>
                             </div>
                             <div className="flex gap-3 justify-center">
-                                <button onClick={handlesSignInWithGoogle} className="btn btn-outline w-1/2 text-2xl text-green-700">
+                                <button onClick={handlesSignInWithGoogle} className="btn btn-outline w-1/2 text-xl text-green-700">
                                     <FaGoogle></FaGoogle>
                                 </button>
-                                <button onClick={handlesSignInWithGitHub} className="btn btn-outline w-1/2 text-2xl text-green-700">
+                                <button onClick={handlesSignInWithGitHub} className="btn btn-outline w-1/2 text-xl text-green-700">
                                     <FaGithub></FaGithub>
                                 </button>
                             </div>

@@ -3,10 +3,11 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useState } from "react";
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.css';
-import { FaSignInAlt } from "react-icons/fa";
 import { useContext } from "react";
 // import UseTitle from "../layout/UseTitle";
 import { authContext } from "../Components/provider/AuthProvider";
+import photo from "../../assets/sign.jpg"
+
 
 
 
@@ -27,9 +28,8 @@ const Register = () => {
         const name = form.get('name');
         const email = form.get('email');
         const password = form.get('password');
-        const photoUrl = form.get('photoUrl');
         setPasswordError('');
-        console.log(name, photoUrl, email, password);
+        console.log(name, email, password);
 
         const uppercase = /[A-Z]/.test(password);
         const lowercase = /[a-z]/.test(password);
@@ -64,24 +64,19 @@ const Register = () => {
 
     return (
         <div>
-            <div className=" min-h-screen bg-base-200 rounded-xl mb-8">
-                <div className="hero-content flex-col">
-                    <div className="text-center">
-                        <h1 className="text-3xl font-bold">Register Now</h1>
+            <div className=" min-h-screen rounded-xl mb-8">
+                <h1 className="text-4xl text-center font-bold text-green-600 mt-4">Register Now</h1>
+                <div className="hero-content flex">
+                    <div className="text-center flex-1 ">
+                        <img className="rounded-2xl w-full" src={photo} alt="" />
                     </div>
-                    <div className="md:w-1/3 w-full shadow-2xl bg-base-100 rounded-2xl" >
+                    <div className="md:w-5/12 w-full rounded-2xl" >
                         <form onSubmit={handleRegister} className="card-body rounded-2xl">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
                                 </label>
                                 <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Photo URL</span>
-                                </label>
-                                <input type="url" name="photoUrl" placeholder="Photo URL" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
@@ -102,21 +97,18 @@ const Register = () => {
                                     </span>
                                 </div>
                                 {passwordError && <p className="text-xs text-red-500">{passwordError}</p>}
-                                <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                </label>
+
                             </div>
                             <div className="form-control mt-6">
                                 <button type="submit" className="btn bg-green-700 text-white">Register</button>
                             </div>
                             <div>
-                                <p>Already have an account?  Please</p>
-                                <Link to='/login'>
-                                    <button className="btn btn-outline w-full mt-4 text-green-700">
-                                        <FaSignInAlt></FaSignInAlt>
+                                <p className="text-center">Already have an account?  Please
+                                    <Link className="font-bold font-xl ml-8" to='/login'>
                                         Login
-                                    </button>
-                                </Link>
+                                    </Link>
+                                </p>
+
                             </div>
                         </form>
                     </div>
