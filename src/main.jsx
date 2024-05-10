@@ -13,6 +13,7 @@ import Register from './assets/auth/Register';
 import ErrorPage from './assets/Components/Pages/Layouts/ErrorPage';
 import CreateAssignment from './assets/Components/Pages/Layouts/CreateAssignment';
 import PrivateRoute from './assets/Components/provider/PrivateRoute';
+import Assignments from './assets/Components/Pages/Layouts/Assignments';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
       {
         path: '/createAssignment',
         element: <PrivateRoute> <CreateAssignment></CreateAssignment> </PrivateRoute>
+      },
+      {
+        path: '/assignments',
+        element: <Assignments></Assignments>,
+        loader: () => fetch('http://localhost:5000/assignments')
       },
       
       {

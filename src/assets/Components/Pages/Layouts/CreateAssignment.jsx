@@ -37,7 +37,7 @@ const CreateAssignment = () => {
                 console.log(data)
                 Swal.fire({
                     icon: "success",
-                    title: "Art Added Successfully",
+                    title: "Assignment Added Successfully",
                     showConfirmButton: false,
                     timer: 2000
                 });
