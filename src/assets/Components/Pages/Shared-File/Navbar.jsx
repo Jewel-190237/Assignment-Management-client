@@ -13,15 +13,21 @@ const Navbar = () => {
     const navLinks = <>
         <li><a><Link to='/'>Home</Link> </a></li>
         <li><a><Link to='/assignments'>Assignments</Link> </a></li>
+        {
+            user &&
+            <li><a><Link to='/myAssignments'>My Assignments</Link> </a></li>
+
+        }
         <li><a><Link to='/createAssignment'>Create Assignment</Link> </a></li>
         <li><a><Link to='/pendingAssignment'>Pending Assignments</Link> </a></li>
+
     </>
 
-const handleSignOut = () => {
-    logOut()
-        .then()
-        .catch()
-}
+    const handleSignOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
     return (
         <div>
             <div className="navbar bg-base-100">

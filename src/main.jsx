@@ -14,6 +14,8 @@ import ErrorPage from './assets/Components/Pages/Layouts/ErrorPage';
 import CreateAssignment from './assets/Components/Pages/Layouts/CreateAssignment';
 import PrivateRoute from './assets/Components/provider/PrivateRoute';
 import Assignments from './assets/Components/Pages/Layouts/Assignments';
+import MyAssignment from './assets/Components/Pages/MyAssignment/MyAssignment';
+import UpdateAssignment from './assets/Components/Pages/Layouts/UpdateAssignment';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +39,14 @@ const router = createBrowserRouter([
         path: '/assignments',
         element: <Assignments></Assignments>,
         loader: () => fetch('http://localhost:5000/assignments')
+      },
+      {
+        path: '/myAssignments',
+        element: <MyAssignment></MyAssignment>,
+      },
+      {
+        path: '/updateAssignments',
+        element: <UpdateAssignment></UpdateAssignment>,
       },
       
       {
