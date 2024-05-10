@@ -11,6 +11,7 @@ import AuthProvider from './assets/Components/provider/AuthProvider';
 import Login from './assets/auth/Login';
 import Register from './assets/auth/Register';
 import ErrorPage from './assets/Components/Pages/Layouts/ErrorPage';
+import CreateAssignment from './assets/Components/Pages/Layouts/CreateAssignment';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/createAssignment',
+        element: <CreateAssignment></CreateAssignment>
       },
       
       {
