@@ -1,5 +1,14 @@
+import { useContext } from "react";
+import { authContext } from "../../provider/AuthProvider";
+import 'sweetalert2/src/sweetalert2.scss'
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 
 const CreateAssignment = () => {
+
+    const { user } = useContext(authContext);
+    const email = user.email;
+
     const handleCreateAssignment = event => {
         event.preventDefault();
         const form = event.target;
@@ -12,7 +21,30 @@ const CreateAssignment = () => {
         const dueTime = form.dueTime.value;
         const description = form.description.value;
 
-        console.log(assignmentName, difficultyLevel, assignmentTitle, assignmentMark, photo_url, dueTime, description)
+        const newAssignment = { email, assignmentName, difficultyLevel, assignmentTitle, assignmentMark, photo_url, dueTime, description }
+
+        console.log(newAssignment)
+
+        fetch('http://localhost:5000/assignments', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newAssignment)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                Swal.fire({
+                    icon: "success",
+                    title: "Art Added Successfully",
+                    showConfirmButton: false,
+                    timer: 2000
+                });
+
+                // navigate('/myCurt')
+
+            })
     }
     return (
         <div className="bg-[#F4F3F0] rounded-xl">
@@ -43,8 +75,7 @@ const CreateAssignment = () => {
                     </div>
                 </div>
                 <div className="md:flex gap-4">
-
-                    <div className="form-control w-1/2 p-4">
+                    <div className="form-control md:w-1/2 p-4">
                         <span className="label-text">Photo url</span>
                         <input type="text" name="photo_url" placeholder="Enter Photo url" className="input input-success input-bordered w-full" />
                     </div>

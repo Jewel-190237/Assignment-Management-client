@@ -12,6 +12,7 @@ import Login from './assets/auth/Login';
 import Register from './assets/auth/Register';
 import ErrorPage from './assets/Components/Pages/Layouts/ErrorPage';
 import CreateAssignment from './assets/Components/Pages/Layouts/CreateAssignment';
+import PrivateRoute from './assets/Components/provider/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/createAssignment',
-        element: <CreateAssignment></CreateAssignment>
+        element: <PrivateRoute> <CreateAssignment></CreateAssignment> </PrivateRoute>
       },
       
       {
