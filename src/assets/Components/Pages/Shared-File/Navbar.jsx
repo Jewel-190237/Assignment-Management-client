@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../../Photos/logo.jpg"
 import user1 from "../../../Photos/user.png"
 import { useContext } from "react";
 import { authContext } from "../../provider/AuthProvider";
-import { Tooltip } from 'react-tooltip'
+import { Tooltip } from 'react-tooltip';
+import './Navbar.css'
 
 
 const Navbar = () => {
@@ -11,15 +12,16 @@ const Navbar = () => {
     const { user, logOut } = useContext(authContext)
 
     const navLinks = <>
-        <li><a><Link to='/'>Home</Link> </a></li>
-        <li><a><Link to='/assignments'>Assignments</Link> </a></li>
+        {/* <li id="link"><NavLink to="/">Home</NavLink></li> */}
+        <li id="link"> <NavLink to='/'>Home </NavLink> </li>
+        <li id="link1"> <NavLink to='/assignments'>Assignments</NavLink></li>
         {
             user &&
-            <li><a><Link to='/myAssignments'>My Assignments</Link> </a></li>
+            <li id="link1" > <NavLink to='/myAssignments'>My Assignments</NavLink></li>
 
         }
-        <li><a><Link to='/createAssignment'>Create Assignment</Link> </a></li>
-        <li><a><Link to='/pendingAssignment'>Pending Assignments</Link> </a></li>
+        <li id="link1"> <NavLink to='/createAssignment'>Create Assignment</NavLink></li>
+        <li id="link1"> <NavLink to='/pendingAssignments'>Pending Assignments</NavLink></li>
 
     </>
 
@@ -43,6 +45,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <img className="w-1/12 rounded-full" src={logo} alt="" />
+                    <h1 className="text-2xl text-center font-bold ml-4"><span className="text-green-300 text-3xl">S</span>tudy<span className="text-yellow-300 text-3xl">U</span>nity<span className="text-red-500 text-3xl">H</span>ub</h1>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

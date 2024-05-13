@@ -16,6 +16,10 @@ import PrivateRoute from './assets/Components/provider/PrivateRoute';
 import Assignments from './assets/Components/Pages/Layouts/Assignments';
 import MyAssignment from './assets/Components/Pages/MyAssignment/MyAssignment';
 import UpdateAssignment from './assets/Components/Pages/Layouts/UpdateAssignment';
+import AssignmentDetails from './assets/Components/Pages/Layouts/AssignmentDetails';
+import AssignmentForm from './assets/Components/Pages/Layouts/AssignmentForm';
+import PendingAssignment from './assets/Components/Pages/Layouts/PendingAssignment';
+import GiveMark from './assets/Components/Pages/Layouts/GiveMark';
 
 const router = createBrowserRouter([
   {
@@ -41,15 +45,35 @@ const router = createBrowserRouter([
         loader: () => fetch('http://localhost:5000/assignments')
       },
       {
-        path: '/myAssignments',
-        element: <MyAssignment></MyAssignment>,
+        path: '/pendingAssignments',
+        element: <PrivateRoute> <PendingAssignment></PendingAssignment>, </PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/pendingAssignments')
       },
       {
-        path: '/updateAssignments/:id',
-        element: <UpdateAssignment></UpdateAssignment>,
-        loader: ({params}) => fetch(`http://localhost:5000/updateAssignment/${params.id}`)
+        path: '/myAssignments',
+        element: <PrivateRoute> <MyAssignment></MyAssignment> </PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/myAssignments')
       },
-      
+      {
+        path: '/updateAssignment/:id',
+        element: <PrivateRoute> <UpdateAssignment></UpdateAssignment>, </PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/updateAssignment/${params.id}`)
+      },
+      {
+        path: '/assignmentDetails/:id',
+        element: <PrivateRoute> <AssignmentDetails></AssignmentDetails> </PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/singleAssignment/${params.id}`)
+      },
+      {
+        path: '/assignmentForm/:id',
+        element: <PrivateRoute> <AssignmentForm></AssignmentForm> </PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/singleAssignment/${params.id}`)
+      },
+      {
+        path: '/giveMark/:id',
+        element: <PrivateRoute> <GiveMark></GiveMark> </PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/giveMark/${params.id}`)
+      },
       {
         path: '/',
         element: <Home></Home>

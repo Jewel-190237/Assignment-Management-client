@@ -1,13 +1,21 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { authContext } from "../../provider/AuthProvider";
 import 'sweetalert2/src/sweetalert2.scss'
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
+import {  MdAddCircle } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const CreateAssignment = () => {
 
+    const [startDate, setStartDate] = useState(new Date());
     const { user } = useContext(authContext);
     const email = user.email;
+
+    const navigate = useNavigate();
 
     const handleCreateAssignment = event => {
         event.preventDefault();
@@ -18,7 +26,7 @@ const CreateAssignment = () => {
         const assignmentTitle = form.assignmentTitle.value;
         const assignmentMark = form.assignmentMark.value;
         const photo_url = form.photo_url.value;
-        const dueTime = form.dueTime.value;
+        const dueTime = startDate;
         const description = form.description.value;
 
         const newAssignment = { email, assignmentName, difficultyLevel, assignmentTitle, assignmentMark, photo_url, dueTime, description }
@@ -41,14 +49,17 @@ const CreateAssignment = () => {
                     showConfirmButton: false,
                     timer: 2000
                 });
-
-                // navigate('/myCurt')
-
+                navigate('/assignments')
             })
     }
     return (
-        <div className="bg-[#F4F3F0] rounded-xl">
-            <h2 className="text-3xl text-center p-4 text-cyan-400 font-bold">Create a new Assignment</h2>
+        <div className="bg-[#F4F3F0] rounded-xl w-10/12 mx-auto p-10">
+            <div>
+                <h2 className="text-3xl font-bold text-center mt-8 text-emerald-400">Create a New Assignment</h2>
+                <p className="text-center mx-auto md:w-3/4 mb-10">
+                    <p>Assignment Creation Portal. Seamlessly craft assignments to guide and inspire your students learning journeys. Elevate education with precision, purpose, and passion</p>
+                </p>
+            </div>
             <form onSubmit={handleCreateAssignment}>
                 <div className="md:flex gap-4 ">
                     <div className="form-control md:w-1/2 p-4">
@@ -79,9 +90,9 @@ const CreateAssignment = () => {
                         <span className="label-text">Photo url</span>
                         <input type="text" name="photo_url" placeholder="Enter Photo url" className="input input-success input-bordered w-full" />
                     </div>
-                    <div className="form-control md:w-1/2 p-4">
-                        <span className="label-text">Due time</span>
-                        <input type="time" name="dueTime" placeholder="Enter processing Time" className="input input-bordered w-full input-success" />
+                    <div className="form-control p-4 ">
+                        Select Due Time:
+                        <DatePicker className=" input input-success input-bordered " showIcon selected={startDate} onChange={(date) => setStartDate(date)} />
                     </div>
                 </div>
                 <div className="md:flex gap-4 mb-4 ">
@@ -90,7 +101,10 @@ const CreateAssignment = () => {
                         <input type="text" name="description" placeholder="Enter Assignment Description" className="input input-success input-bordered w-full" />
                     </div>
                 </div>
-                <input className="btn btn-block bg-cyan-800 text-white mb-8" type="submit" value="Create Assignment" />
+                <button className=" btn btn-block bg-emerald-300 btn-outline">
+                    <MdAddCircle className="text-xl"></MdAddCircle>
+                    <input type="submit" value="Create Assignment" />
+                </button>
             </form>
         </div>
     );

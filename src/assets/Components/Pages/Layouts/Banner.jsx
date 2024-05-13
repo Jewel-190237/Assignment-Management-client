@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import img1 from "../../../Photos/a1.jpg"
 import img2 from "../../../Photos/a2.jpg"
 import img3 from "../../../Photos/a3.jpg"
@@ -14,11 +15,14 @@ const Banner = () => {
                         <a href="#slide2" className="btn btn-circle">❯</a>
                     </div>
                     <div className="absolute rounded-2xl flex text-white gap-6 items-center h-full bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">
-                        <div className="w-2/3 space-y-7 p-4">
-                            <h1 className="text-4xl">Affordable Price For Car Servicing</h1>
-                            <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
-                            <button className="btn btn-primary">Discover More</button>
-                            <button className="btn btn-secondary ml-5">Latest Car</button>
+                        <div className="w-2/3 mx-auto space-y-7 p-4">
+                            <h1 className="text-6xl text-center font-bold">StudyUnityHub</h1>
+                            <h1 className="text-4xl text-center">Where Learning Meets Collaboration</h1>
+                            <p className="text-center">Welcome to our Online Group Study Hub! Unite, Learn, and Succeed Together. Join a community of dedicated learners collaborating in real-time. Elevate your study experience with interactive sessions, shared resources, and supportive peers. Lets achieve academic excellence, hand in hand!</p>
+                            <div className="flex justify-evenly">
+                                <Link to='/assignments'><button className="btn btn-primary">Explore More</button></Link>
+                                <Link to='/login'><button className="btn btn-secondary">Lets Start</button></Link>
+                            </div>
                         </div>
                     </div>
                 </div>
