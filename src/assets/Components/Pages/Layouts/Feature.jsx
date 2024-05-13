@@ -1,8 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 
 const Feature = () => {
-    const card = useLoaderData();
-    console.log(card);
+    const ass = useLoaderData();
+    console.log(ass)
 
     return (
         <div>

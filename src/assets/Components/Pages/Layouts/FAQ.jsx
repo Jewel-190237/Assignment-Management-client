@@ -1,7 +1,7 @@
 import image from '../../../Photos/cranium.png'
 const FAQ = () => {
     return (
-        <div>
+        <div className='bg-slate-100 rounded-xl m-4 w-full p-4 mx-auto'>
             <div>
                 <div>
                     <h2 className="text-2xl font-bold text-center mt-8 text-emerald-400">Frequent Asked Question</h2>
@@ -11,7 +11,7 @@ const FAQ = () => {
                 </div>
                 
             </div>
-            <div className="flex gap-4">
+            <div className="flex">
                 <div>
                     <img className='w-1/2 mx-auto ' src={image} alt="" />
                 </div>
@@ -59,7 +59,7 @@ const FAQ = () => {
                     <div className="collapse collapse-arrow join-item border border-base-300">
                         <input type="radio" name="my-accordion-4" />
                         <div className="collapse-title text-xl font-medium">
-                            How can we manage assignments and tasks effectively in an online group study setup
+                            How can we manage assignments and tasks effectively in an online group study setup ?
                         </div>
                         <div className="collapse-content">
                             <p>Popular platforms include Google Workspace (formerly G Suite), Microsoft Teams, Zoom, Slack, Discord, and Trello. Choose a platform based on your groups preferences and needs for communication, file sharing, and task management.</p>
