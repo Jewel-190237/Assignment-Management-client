@@ -37,7 +37,7 @@ const FAQ = () => {
                 <div className="collapse collapse-arrow join-item border border-base-300">
                     <input type="radio" name="my-accordion-4" />
                     <div className="collapse-title text-xl font-medium">
-                    Which online platforms can be used for online group study?
+                        Which online platforms can be used for online group study?
                     </div>
                     <div className="collapse-content">
                         <p>Popular platforms include Google Workspace (formerly G Suite), Microsoft Teams, Zoom, Slack, Discord, and Trello. Choose a platform based on your groups preferences and needs for communication, file sharing, and task management.</p>
@@ -46,7 +46,7 @@ const FAQ = () => {
                 <div className="collapse collapse-arrow join-item border border-base-300">
                     <input type="radio" name="my-accordion-4" />
                     <div className="collapse-title text-xl font-medium">
-                    Which online platforms can be used for online group study?
+                    How can we manage assignments and tasks effectively in an online group study setup
                     </div>
                     <div className="collapse-content">
                         <p>Popular platforms include Google Workspace (formerly G Suite), Microsoft Teams, Zoom, Slack, Discord, and Trello. Choose a platform based on your groups preferences and needs for communication, file sharing, and task management.</p>
