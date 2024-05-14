@@ -108,7 +108,6 @@ const Register = () => {
                                         Login
                                     </Link>
                                 </p>
-
                             </div>
                         </form>
                     </div>

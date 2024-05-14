@@ -2,6 +2,7 @@
 // import { Link } from "react-router-dom";
 
 import { GrUpdate } from "react-icons/gr";
+import { FcViewDetails } from "react-icons/fc";
 import { Link } from "react-router-dom";
 
 const AssignmentCard = ({ assignment }) => {
@@ -23,7 +24,7 @@ const AssignmentCard = ({ assignment }) => {
                     <div className="flex justify-between gap-4">
                         <Link to={`/assignmentDetails/${_id}`} className="btn btn-outline my-2 bg-emerald-800 w-1/2">
                             <button className="flex gap-4 ">
-                                <GrUpdate></GrUpdate>
+                                <FcViewDetails></FcViewDetails>
                                 Details
                             </button>
                         </Link>
