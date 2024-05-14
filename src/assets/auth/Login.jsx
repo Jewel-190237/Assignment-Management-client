@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from 'react-icons/fa';
+import { FaEye, FaEyeSlash,  FaGoogle } from 'react-icons/fa';
 import { TiUserAdd } from "react-icons/ti";
 import { FaSignInAlt } from "react-icons/fa";
 import Swal from 'sweetalert2';
@@ -127,7 +127,7 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 {/* <button className="btn bg-green-700 text-white">Login</button> */}
 
-                                <button className="btn btn-outline  bg-emerald-300 w-full mt-4">
+                                <button className="btn btn-outline  bg-emerald-800 w-full mt-4">
                                     <FaSignInAlt></FaSignInAlt>
                                     Login
                                 </button>
@@ -136,11 +136,8 @@ const Login = () => {
                                 <p className="text-center"> or,  Continue with</p>
                             </div>
                             <div className="flex gap-3 justify-center">
-                                <button onClick={handlesSignInWithGoogle} className="btn btn-outline w-1/2 text-xl text-green-700">
-                                    <FaGoogle></FaGoogle>
-                                </button>
-                                <button onClick={handlesSignInWithGitHub} className="btn btn-outline w-1/2 text-xl text-green-700">
-                                    <FaGithub></FaGithub>
+                                <button onClick={handlesSignInWithGoogle} className="btn btn-outline btn-block text-xl text-green-700">
+                                     <FaGoogle></FaGoogle> Google
                                 </button>
                             </div>
                             <div>
