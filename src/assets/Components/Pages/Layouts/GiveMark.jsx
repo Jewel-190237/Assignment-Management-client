@@ -66,7 +66,6 @@ const GiveMark = () => {
                         Assignment Name: {assignmentName}
                     </h2>
                     <hr />
-                    <p className="text-green-600">Assignment Link: <span className="font-bold ml-5"> {assignmentLink} </span> </p>
                     <p className="text-green-600">Examinee name <span className="font-bold ml-5"> {userName} </span> </p>
                     <p className="text-green-600">Quick Note<span className="font-bold ml-5"> {quickNote} </span> </p>
                 </div>
@@ -85,12 +84,14 @@ const GiveMark = () => {
                         </div>
                     </div>
                     <button className=" btn btn-block bg-emerald-800 btn-outline">
-                    <IoCheckmarkDoneCircle className="text-xl"></IoCheckmarkDoneCircle>
-                        <input  type="submit" value="Submit" />
+                        <IoCheckmarkDoneCircle className="text-xl"></IoCheckmarkDoneCircle>
+                        <input type="submit" value="Submit" />
                     </button>
                 </form>
             </div>
-
+            <div>
+                <iframe className="mx-auto mt-8 w-full h-96" src={assignmentLink} allow="autoplay"></iframe>
+            </div>
         </div>
     );
 };
