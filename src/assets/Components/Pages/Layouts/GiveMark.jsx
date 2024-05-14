@@ -84,7 +84,7 @@ const GiveMark = () => {
                             <input type="text" name="feedback" required placeholder="Enter Feedback" className="input input-bordered w-full input-success" />
                         </div>
                     </div>
-                    <button className=" btn btn-block bg-emerald-300 btn-outline">
+                    <button className=" btn btn-block bg-emerald-800 btn-outline">
                     <IoCheckmarkDoneCircle className="text-xl"></IoCheckmarkDoneCircle>
                         <input  type="submit" value="Submit" />
                     </button>
