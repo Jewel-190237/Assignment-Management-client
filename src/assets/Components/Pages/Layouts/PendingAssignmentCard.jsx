@@ -25,7 +25,7 @@ const PendingAssignmentCard = ({ assignment }) => {
                     <h2 className="text-green-600 text-2xl font-bold">
                         {assignmentName}
                     </h2>
-                    <p className="text-green-600 font-bold mb-4">Assignment Title: <span className="font-bold ml-5"> {assignmentTitle} </span> </p>
+                    <p className="text-green-600 font-bold mb-4"><span className="font-bold"> {assignmentTitle} </span> </p>
                     <hr />
                     <p className="text-green-600 font-bold">Assignment: </p>
                     <p className="text-green-600">Assignment Mark: <span className="font-bold ml-5"> {assignmentMark} </span> </p>
