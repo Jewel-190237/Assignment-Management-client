@@ -22,7 +22,7 @@ const AssignmentForm = () => {
 
         const submittedAssignment = { assignmentLink, userName, quickNote, assignmentName, difficultyLevel, assignmentTitle, assignmentMark, photo_url, dueTime, description, email }
 
-        fetch('http://localhost:5000/takeAssignments', {
+        fetch('https://assignment-11-server-livid-pi.vercel.app/takeAssignments', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -42,43 +42,43 @@ const router = createBrowserRouter([
       {
         path: '/assignments',
         element: <Assignments></Assignments>,
-        loader: () => fetch('http://localhost:5000/assignments')
+        loader: () => fetch('https://assignment-11-server-livid-pi.vercel.app/assignments')
       },
     
       {
         path: '/pendingAssignments',
         element: <PrivateRoute> <PendingAssignment></PendingAssignment>, </PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/pendingAssignments')
+        loader: () => fetch('https://assignment-11-server-livid-pi.vercel.app/pendingAssignments')
       },
       {
         path: '/myAssignments',
         element: <PrivateRoute> <MyAssignment></MyAssignment> </PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/myAssignments')
+        loader: () => fetch('https://assignment-11-server-livid-pi.vercel.app/myAssignments')
       },
       {
         path: '/updateAssignment/:id',
         element: <PrivateRoute> <UpdateAssignment></UpdateAssignment>, </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/updateAssignment/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-11-server-livid-pi.vercel.app/updateAssignment/${params.id}`)
       },
       {
         path: '/assignmentDetails/:id',
         element: <PrivateRoute> <AssignmentDetails></AssignmentDetails> </PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/singleAssignment/${params.id}`)
+        loader: ({params}) => fetch(`https://assignment-11-server-livid-pi.vercel.app/singleAssignment/${params.id}`)
       },
       {
         path: '/assignmentForm/:id',
         element: <PrivateRoute> <AssignmentForm></AssignmentForm> </PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/singleAssignment/${params.id}`)
+        loader: ({params}) => fetch(`https://assignment-11-server-livid-pi.vercel.app/singleAssignment/${params.id}`)
       },
       {
         path: '/giveMark/:id',
         element: <PrivateRoute> <GiveMark></GiveMark> </PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/giveMark/${params.id}`)
+        loader: ({params}) => fetch(`https://assignment-11-server-livid-pi.vercel.app/giveMark/${params.id}`)
       },
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/allAssignment')
+        loader: () => fetch('https://assignment-11-server-livid-pi.vercel.app/allAssignment')
       }
     ]
   },

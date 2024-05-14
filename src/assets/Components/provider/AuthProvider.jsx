@@ -46,18 +46,18 @@ const AuthProvider = ({ children }) => {
 
             const userEmail = currentUser?.email || user?.email;
             const loggedUser = { email: userEmail };
-            
+
             setUser(currentUser)
             setLoading(false)
             //if user exists then create a token
             if (currentUser) {
-                axios.post('http://localhost:5000/jwt', loggedUser, { withCredentials: true })
+                axios.post('https://assignment-11-server-livid-pi.vercel.app/jwt', loggedUser, { withCredentials: true })
                     .then(res => {
                         console.log('Token Responds is', res.data);
                     })
             }
             else {
-                axios.post('http://localhost:5000/logout', loggedUser, { withCredentials: true })
+                axios.post('https://assignment-11-server-livid-pi.vercel.app/logout', loggedUser, { withCredentials: true })
                     .then(res => {
                         console.log('Logout ',res.data);
                     })

@@ -30,7 +30,7 @@ const GiveMark = () => {
 
         const myAssignment = { assignmentName, assignmentMark, assignmentTitle, obtainedMark, feedback, status, photo_url, description, dueTime, difficultyLevel, email }
 
-        fetch('http://localhost:5000/myAssignments', {
+        fetch('https://assignment-11-server-livid-pi.vercel.app/myAssignments', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

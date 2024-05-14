@@ -8,7 +8,7 @@ const PendingAssignmentCard = ({ assignment }) => {
     const handleDelete = id => {
         console.log(id);
 
-        fetch(`http://localhost:5000/deletePendingAssignment/${_id}`, {
+        fetch(`https://assignment-11-server-livid-pi.vercel.app/deletePendingAssignment/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

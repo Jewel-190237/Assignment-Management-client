@@ -27,10 +27,12 @@ const UpdateAssignment = () => {
         const assignmentTitle = form.assignmentTitle.value;
         const assignmentMark = form.assignmentMark.value;
         const photo_url = form.photo_url.value;
-        const dueTime = form.dueTime.value;
+        // const dueTime = form.dueTime.value;
         const description = form.description.value;
 
         const newAssignment = { assignmentName, difficultyLevel, assignmentTitle, assignmentMark, photo_url, dueTime, description }
+
+        console.log(newAssignment);
 
         Swal.fire({
             title: "Do you want to save the changes?",
@@ -41,7 +43,7 @@ const UpdateAssignment = () => {
         }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/updateAssignment/${_id}`, {
+                fetch(`https://assignment-11-server-livid-pi.vercel.app/updateAssignment/${_id}`, {
                     method: 'PUT',
                     headers: {
                         'content-type': 'application/json'

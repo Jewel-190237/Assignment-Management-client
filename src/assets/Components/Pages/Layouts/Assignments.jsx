@@ -21,7 +21,7 @@ const Assignments = () => {
     console.log(level)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/assignmentLevel?difficultyLevel=${level}`, {credentials: 'include'})
+        fetch(`https://assignment-11-server-livid-pi.vercel.app/assignmentLevel?difficultyLevel=${level}`, {credentials: 'include'})
             .then(res => res.json())
             .then(data => {
                 console.log(data);

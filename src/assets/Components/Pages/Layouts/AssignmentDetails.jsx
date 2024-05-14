@@ -16,7 +16,7 @@ const AssignmentDetails = () => {
     const handleDelete = id => {
         console.log(id);
 
-        fetch(`http://localhost:5000/deleteAssFromAssPage/${_id}`, {
+        fetch(`https://assignment-11-server-livid-pi.vercel.app/deleteAssFromAssPage/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
