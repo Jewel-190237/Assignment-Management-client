@@ -60,7 +60,7 @@ const GiveMark = () => {
                     <p>GiveAssignment mark and Feedback page, the nucleus of academic growth and collaboration. Here, creators craft assignments while collaborators provide constructive feedback, fostering a vibrant ecosystem of learning and progress</p>
                 </p>
             </div>
-            <div className="card  mb-4 p-4 md:w-1/2 w-full mx-auto">
+            <div className="card  bg-slate-700 mb-4 p-4 md:w-1/2 w-full mx-auto">
                 <div className="card-body">
                     <h2 className="text-green-600 text-2xl font-bold text-center">
                         Assignment Name: {assignmentName}

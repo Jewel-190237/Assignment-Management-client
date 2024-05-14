@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect, useState } from "react";
 // import { authContext } from "../../provider/AuthProvider";
 import MyAssignmentCard from "./MyAssignmentCard";
@@ -17,7 +18,7 @@ const MyAssignment = () => {
                 console.log(data);
                 setAssignments(data)
             })
-    }, []);
+    }, [assignments]);
 
     return (
         <div>
