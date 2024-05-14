@@ -72,7 +72,7 @@ const GiveMark = () => {
                 </div>
             </div>
 
-            <div className="bg-[#F4F3F0] rounded-xl w-10/12 mx-auto p-10">
+            <div className="bg-slate-700 rounded-xl w-10/12 mx-auto p-10">
                 <form onSubmit={handleMarkAssignment}>
                     <div className="md:flex gap-4 ">
                         <div className="form-control md:w-1/2 p-4">
