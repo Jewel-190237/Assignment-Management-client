@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import { useLoaderData } from "react-router-dom";
 import AssignmentCard from "./AssignmentCard";
@@ -24,9 +25,9 @@ const Assignments = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                setAssignment(data)
+                setAssignment(data);
             })
-    }, []);
+    }, [assignment]);
 
     return (
         <div>

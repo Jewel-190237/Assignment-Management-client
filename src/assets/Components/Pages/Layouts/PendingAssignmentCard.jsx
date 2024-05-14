@@ -19,7 +19,7 @@ const PendingAssignmentCard = ({ assignment }) => {
 
     return (
         <div>
-            <div className="card bg-slate-100 shadow-xl mb-4 p-4">
+            <div className="card bg-slate-700 shadow-xl mb-4 p-4">
                 <figure><img src={photo_url} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="text-green-600 text-2xl font-bold">
@@ -33,7 +33,7 @@ const PendingAssignmentCard = ({ assignment }) => {
                     <p className="text-green-600">Status: <span className="font-bold ml-5"> Pending </span> </p>
                     <hr />
                     <button onClick={() => handleDelete(_id)}>
-                        <Link to={`/giveMark/${_id}`} className="btn btn-outline btn-block bg-emerald-300 ">
+                        <Link to={`/giveMark/${_id}`} className="btn btn-outline btn-block bg-emerald-800 ">
                             <button className="flex gap-4">
                                 Give Mark
                             </button>

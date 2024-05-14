@@ -1,7 +1,8 @@
+/* eslint-disable react-refresh/only-export-components */
 import image from '../../../Photos/cranium.png'
 const FAQ = () => {
     return (
-        <div className='bg-slate-100 rounded-xl m-4 w-full p-4 mx-auto'>
+        <div className='rounded-xl m-4 w-full p-4 mx-auto'>
             <div>
                 <div>
                     <h2 className="text-2xl font-bold text-center mt-8 text-emerald-400">Frequent Asked Question</h2>
@@ -11,7 +12,7 @@ const FAQ = () => {
                 </div>
                 
             </div>
-            <div className="flex">
+            <div className=" flex md:flex-row flex-col">
                 <div>
                     <img className='w-1/2 mx-auto ' src={image} alt="" />
                 </div>

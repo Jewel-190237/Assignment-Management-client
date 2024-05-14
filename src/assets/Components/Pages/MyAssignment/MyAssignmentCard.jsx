@@ -40,7 +40,7 @@ const MyAssignmentCard = ({ assignment, assignments, setAssignments }) => {
     }
 
     return (
-        <div className="card bg-slate-100 shadow-xl mb-4 p-4">
+        <div className="card bg-slate-700 shadow-xl mb-4 p-4">
             <figure><img src={photo_url} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="text-green-600 text-2xl font-bold">
@@ -56,13 +56,8 @@ const MyAssignmentCard = ({ assignment, assignments, setAssignments }) => {
                 <hr />
 
                 <div className="flex gap-2 justify-between pr-4">
-                    {/* <Link to={`/updateAssignment/${_id}`} className="btn btn-outline my-2 ">
-                        <button className="flex gap-4 text-green-600">
-                            <GrUpdate></GrUpdate>
-                            Update
-                        </button>
-                    </Link> */}
-                    <Link className=" btn btn-outline btn-block bg-emerald-300 my-2">
+                    
+                    <Link className=" btn btn-outline btn-block bg-emerald-800 my-2">
                         <button onClick={() => handleDelete(_id)} className="flex gap-4">
                             <RiDeleteBin6Fill></RiDeleteBin6Fill>
                             Delete

@@ -49,7 +49,7 @@ const AssignmentForm = () => {
                     <p>Crafting Your Assignment Experience. Seamlessly upload PDF files, input your username, and jot down quick notes for clarity and collaboration. Elevate your assignment submission process with ease and efficiency </p>
                 </p>
             </div>
-            <div className="bg-[#F4F3F0] rounded-xl w-10/12 mx-auto p-10">
+            <div className="bg-slate-700 rounded-xl w-10/12 mx-auto p-10">
                 <form onSubmit={handleTakeAssignment}>
                     <div className="md:flex gap-4 ">
                         <div className="form-control md:w-1/2 p-4">
@@ -65,7 +65,7 @@ const AssignmentForm = () => {
                         <span className="label-text font-bold">Quick Note: </span>
                         <input type="text" name="quickNote" required placeholder="Enter quick note" className="input input-bordered w-full input-success" />
                     </div>
-                    <button className=" btn btn-block bg-emerald-300 btn-outline">
+                    <button className=" btn btn-block bg-emerald-800 btn-outline">
                     <MdAddTask className='text-xl'></MdAddTask>
                     <input type="submit" value="Submit Assignment" />
                 </button>

@@ -3,9 +3,15 @@ import 'sweetalert2/src/sweetalert2.scss'
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
 import { GrUpdate } from "react-icons/gr";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { useState } from "react";
+
 
 const UpdateAssignment = () => {
     const assignment = useLoaderData();
+    const [startDate, setStartDate] = useState(new Date());
+
     console.log(assignment);
 
     const navigate = useNavigate();
@@ -47,7 +53,7 @@ const UpdateAssignment = () => {
                         console.log(data)
                     })
                 Swal.fire("Saved!", "", "success");
-                 navigate('/assignments')
+                navigate('/assignments')
             } else if (result.isDenied) {
                 Swal.fire("Changes are not saved", "", "info");
             }
@@ -56,22 +62,22 @@ const UpdateAssignment = () => {
     }
 
     return (
-        <div className="bg-[#F4F3F0] rounded-xl w-10/12 mx-auto p-10">
+        <div className="bg-slate-700 rounded-xl w-10/12 mx-auto p-10">
             <div>
                 <h2 className="text-3xl font-bold text-center mt-8 text-emerald-400">Update of {assignmentName}</h2>
                 <p className="text-center mx-auto md:w-3/4 mb-10">
-                    <p>Revamp Your Learning Journey: The Update Assignment Hub. Transform your academic path with seamless assignment updates. Stay agile, stay informed, and propel your progress forward effortlessly.</p>
+                    <p className="text-lime-200">Revamp Your Learning Journey: The Update Assignment Hub. Transform your academic path with seamless assignment updates. Stay agile, stay informed, and propel your progress forward effortlessly.</p>
                 </p>
             </div>
             <form onSubmit={handleUpdateAssignment}>
                 <div className="md:flex gap-4 ">
                     <div className="form-control md:w-1/2 p-4">
-                        <span className="label-text">Name</span>
+                        <span className="label-text text-lime-200">Name: </span>
                         <input type="text" name="assignmentName" defaultValue={assignmentName} className="input input-bordered w-full input-success" />
                     </div>
                     <div className="form-control md:w-1/2 p-4">
-                        <span className="label-text">difficulty level</span>
-                        <select className='input input-bordered  w-full input-success' defaultValue={difficultyLevel} name="difficultyLevel" id="">
+                        <span className="label-text text-lime-200">Difficulty level</span>
+                        <select className='input input-bordered  w-full input-success ' defaultValue={difficultyLevel} name="difficultyLevel" id="">
                             <option value="Easy">Easy</option>
                             <option value="Medium">Medium</option>
                             <option value="Hard">Hard</option>
@@ -80,31 +86,31 @@ const UpdateAssignment = () => {
                 </div>
                 <div className="md:flex gap-4 ">
                     <div className="form-control md:w-1/2 p-4">
-                        <span className="label-text">Assignment Title</span>
+                        <span className="label-text text-lime-200">Assignment Title: </span>
                         <input type="text" name="assignmentTitle" defaultValue={assignmentTitle} className="input input-bordered w-full input-success" />
                     </div>
                     <div className="form-control md:w-1/2 p-4">
-                        <span className="label-text">Assignment Mark</span>
+                        <span className="label-text text-lime-200">Assignment Mark: </span>
                         <input type="number" name="assignmentMark" defaultValue={assignmentMark} className="input input-bordered w-full input-success" />
                     </div>
                 </div>
                 <div className="md:flex gap-4">
                     <div className="form-control md:w-1/2 p-4">
-                        <span className="label-text">Photo url</span>
+                        <span className="label-text text-lime-200">Photo url: </span>
                         <input type="text" name="photo_url" defaultValue={photo_url} className="input input-success input-bordered w-full" />
                     </div>
-                    <div className="form-control md:w-1/2 p-4">
-                        <span className="label-text">Due time</span>
-                        <input type="time" name="dueTime" defaultValue={dueTime} className="input input-bordered w-full input-success" />
+                    <div defaultValue={dueTime} className="form-control p-4 ">
+                        <p className="text-lime-200">Select Due Time:</p>
+                        <DatePicker className=" input input-success  input-bordered " showIcon selected={startDate} onChange={(date) => setStartDate(date)} />
                     </div>
                 </div>
                 <div className="md:flex gap-4 mb-4 ">
                     <div className="form-control w-full p-4">
-                        <span className="label-text">Description</span>
+                        <span className="label-text text-lime-200">Description: </span>
                         <input type="text" name="description" defaultValue={description} className="input input-success input-bordered w-full" />
                     </div>
                 </div>
-                <button className=" btn btn-block bg-emerald-300 btn-outline">
+                <button className=" btn btn-block bg-emerald-800 btn-outline">
                     <GrUpdate className="text-xl"></GrUpdate>
                     <input type="submit" value="Update Assignment" />
                 </button>
