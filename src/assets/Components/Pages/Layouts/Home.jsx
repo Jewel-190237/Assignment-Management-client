@@ -10,8 +10,10 @@ import c from '../../../Photos/d.jpg'
 import d from '../../../Photos/l.jpg'
 import e from '../../../Photos/f.jpg'
 import f from '../../../Photos/e.jpg'
+import UseTitle from "./UseTitle";
 
 const Home = () => {
+    UseTitle('Home')
     const assignments = useLoaderData();
     const [ass, setAss] = useState(6)
 

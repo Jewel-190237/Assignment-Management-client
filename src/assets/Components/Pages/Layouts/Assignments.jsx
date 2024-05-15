@@ -3,8 +3,10 @@
 import { useLoaderData } from "react-router-dom";
 import AssignmentCard from "./AssignmentCard";
 import { useEffect, useState } from "react";
+import UseTitle from "./UseTitle";
 
 const Assignments = () => {
+    UseTitle('Assignments')
     const assignments = useLoaderData();
     console.log(assignments.length);
     const [assignment, setAssignment] = useState(assignments)

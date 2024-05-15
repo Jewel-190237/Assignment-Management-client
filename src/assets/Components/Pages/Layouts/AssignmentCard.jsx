@@ -4,8 +4,10 @@
 import { GrUpdate } from "react-icons/gr";
 import { FcViewDetails } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import UseTitle from "./UseTitle";
 
 const AssignmentCard = ({ assignment }) => {
+    UseTitle('Assignments')
     const { _id, photo_url, assignmentName, difficultyLevel, assignmentTitle, assignmentMark } = assignment;
     return (
         <div>

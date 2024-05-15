@@ -7,8 +7,10 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {  MdAddCircle } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import UseTitle from "./UseTitle";
 
 const CreateAssignment = () => {
+    UseTitle('Create Assignment')
 
     const [startDate, setStartDate] = useState(new Date());
     const { user } = useContext(authContext);

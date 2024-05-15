@@ -5,7 +5,9 @@ import 'sweetalert2/src/sweetalert2.scss'
 import { useContext } from "react";
 import { authContext } from "../../provider/AuthProvider";
 import { IoCheckmarkDoneCircle } from "react-icons/io5";
+import UseTitle from "./UseTitle";
 const GiveMark = () => {
+    UseTitle('Give Mark')
     const assignment = useLoaderData();
 
     const navigate = useNavigate();

@@ -1,7 +1,9 @@
 import { MdAddTask } from "react-icons/md";
 import { Link, useLoaderData } from "react-router-dom";
+import UseTitle from "./UseTitle";
 
 const AssignmentDetails = () => {
+    UseTitle('Assignment Details')
 
     const assignment = useLoaderData();
 

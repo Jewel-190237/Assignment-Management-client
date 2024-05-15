@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
 
 import { Link } from "react-router-dom";
+import UseTitle from "./UseTitle";
 
 const PendingAssignmentCard = ({ assignment }) => {
+    UseTitle('Pending Assignment')
     const { _id, photo_url, assignmentName, assignmentTitle, assignmentMark, userName } = assignment;
 
     const handleDelete = id => {

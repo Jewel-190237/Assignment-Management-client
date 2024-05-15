@@ -4,10 +4,11 @@ import { Link } from "react-router-dom";
 import 'sweetalert2/src/sweetalert2.scss'
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
+import UseTitle from "../Layouts/UseTitle";
 
 const MyAssignmentCard = ({ assignment, assignments, setAssignments }) => {
     const { _id, photo_url, assignmentName, obtainedMark, assignmentTitle, assignmentMark, status, feedback } = assignment;
-
+    UseTitle('My Assignment')
     const handleDelete = _id => {
         console.log(_id)
 

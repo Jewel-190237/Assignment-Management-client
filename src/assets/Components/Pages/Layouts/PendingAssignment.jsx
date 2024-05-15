@@ -1,7 +1,9 @@
 import { useLoaderData } from "react-router-dom";
 import PendingAssignmentCard from "./PendingAssignmentCard";
+import UseTitle from "./UseTitle";
 
 const PendingAssignment = () => {
+    UseTitle('Pending Assignment')
     const assignments = useLoaderData();
     console.log(assignments.length);
     return (

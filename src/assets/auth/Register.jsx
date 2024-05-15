@@ -7,12 +7,13 @@ import { useContext } from "react";
 // import UseTitle from "../layout/UseTitle";
 import { authContext } from "../Components/provider/AuthProvider";
 import photo from "../../assets/Photos/sign.jpg"
+import UseTitle from "../Components/Pages/Layouts/UseTitle";
 
 
 
 
 const Register = () => {
-    // UseTitle('Register')
+    UseTitle('Register')
 
     const { createUser } = useContext(authContext)
 

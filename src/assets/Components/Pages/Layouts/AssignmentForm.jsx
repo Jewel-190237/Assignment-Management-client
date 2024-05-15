@@ -3,8 +3,10 @@ import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { MdAddTask } from 'react-icons/md';
+import UseTitle from './UseTitle';
 
 const AssignmentForm = () => {
+    UseTitle('Assignment Form')
     const assignment = useLoaderData();
     const navigate = useNavigate();
 

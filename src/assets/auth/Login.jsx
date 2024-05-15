@@ -8,6 +8,7 @@ import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.css';
 import photo from "../../assets/Photos/sign.jpg"
 import { authContext } from "../Components/provider/AuthProvider";
+import UseTitle from "../Components/Pages/Layouts/UseTitle";
 // import UseTitle from "../layout/UseTitle";
 
 
@@ -15,7 +16,7 @@ import { authContext } from "../Components/provider/AuthProvider";
 
 const Login = () => {
 
-    // UseTitle('Login')
+     UseTitle('Login')
 
     const location = useLocation();
     const naviGate = useNavigate();

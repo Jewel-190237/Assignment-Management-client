@@ -6,9 +6,11 @@ import { GrUpdate } from "react-icons/gr";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useState } from "react";
+import UseTitle from "./UseTitle";
 
 
 const UpdateAssignment = () => {
+    UseTitle('Update Assignment')
     const assignment = useLoaderData();
     const [startDate, setStartDate] = useState(new Date());
 

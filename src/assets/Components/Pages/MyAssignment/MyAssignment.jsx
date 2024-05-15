@@ -3,8 +3,10 @@ import { useContext, useEffect, useState } from "react";
 // import { authContext } from "../../provider/AuthProvider";
 import MyAssignmentCard from "./MyAssignmentCard";
 import { authContext } from "../../provider/AuthProvider";
+import UseTitle from "../Layouts/UseTitle";
 
 const MyAssignment = () => {
+    UseTitle('My Assignment')
 
     const [assignments, setAssignments] = useState([]);
 
