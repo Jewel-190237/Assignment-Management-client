@@ -91,8 +91,9 @@ const GiveMark = () => {
                     </button>
                 </form>
             </div>
+            {/* show pdf file after submit link of a pdf file */}
             <div>
-                <iframe className="mx-auto mt-8 w-full h-96" src={assignmentLink} allow="autoplay"></iframe>
+                <iframe className="mx-auto mt-8 w-full h-96 p-2 my-1" src={assignmentLink} allow="autoplay"></iframe>
             </div>
         </div>
     );

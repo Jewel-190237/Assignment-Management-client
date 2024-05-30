@@ -5,11 +5,11 @@ import 'sweetalert2/src/sweetalert2.scss'
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
 import UseTitle from "../Layouts/UseTitle";
-import { FcViewDetails } from "react-icons/fc";
 
 const MyAssignmentCard = ({ assignment, assignments, setAssignments }) => {
     const { _id, photo_url, assignmentName, obtainedMark, assignmentTitle, assignmentMark, status, feedback } = assignment;
-    UseTitle('My Assignment')
+    UseTitle('My Assignment');
+    
     const handleDelete = _id => {
         console.log(_id)
 
@@ -58,13 +58,7 @@ const MyAssignmentCard = ({ assignment, assignments, setAssignments }) => {
                 <hr />
 
                 <div className="flex gap-2 justify-between pr-4">
-                    <Link to={`/assignmentDetails/${_id}`} className="btn btn-outline my-2 bg-emerald-800 w-1/2">
-                        <button className="flex gap-4 ">
-                            <FcViewDetails></FcViewDetails>
-                            Details
-                        </button>
-                    </Link>
-                    <Link className=" btn btn-outline bg-emerald-800 my-2 w-1/2">
+                    <Link className=" btn btn-outline btn-block bg-emerald-800 my-2 ">
                         <button onClick={() => handleDelete(_id)} className="flex gap-4">
                             <RiDeleteBin6Fill></RiDeleteBin6Fill>
                             Delete
