@@ -1,39 +1,36 @@
 
 <h1>About Projects</h1>
-<b> Website name: </b> MediCare (Full Stack Medical Camp Management System) </br>
-<b>Admin Email: </b> jewel@12.com </br>
-<b>Admin Password: </b> Jewel190237 </br>
-<b>Live link: </b> https://medical-camp-management-6978c.web.app/ </br>
-<b>Client Site: </b>https://github.com/Jewel-190237/Medical-Camp-Management-client</br>
+<b> Website name: </b> StudyUtilityHub (Online Assignment Management System) </br>
+<b>Live link: </b> https://assignment-11-baa86.web.app/ </br>
+<b>Server Site: </b>https://github.com/Jewel-190237/Assignment-Management-server</br>
 </br>
 
 <h1>Functionality</h1>
-<p> Medical Camp Management System is a advanced Full Stack web application, have different roles like(Admin and general users). offering essential features to facilitate seamless online transactions and user management</p>
+<p> Online Assignment Management System is a responsive web application designed for user-friendly management for both students and examiners. And offering assignment and take student and submit it then examiner give mark and feedback</p>
 
 <ul>
-     <li> <b>Camp Management (AddCamp):</b> Private/protected routes for users to manage their Medical Details.</li>
+     <li> <b>Assignment Management (Add Assignment):</b> Private/protected routes for users to manage their Assignment Details.</li>
  <li>
- <b>Update/Delete Functionality::</b>  Allows admin to update or delete medicines, ensuring database accuracy and product management.
+ <b>Update/Delete Functionality::</b>  Allows login User to update or delete medicines, ensuring database accuracy and product management.
  </li>
  <li>
   <b>User Registration and Login:</b> Provides a user-friendly registration form with validation and login functionality. And also can login using any google account.
  </li>
- <li> <b>Search and Sort:</b> Facilitates easy navigation through Medical names </li>
-<li> <b>Payment Method:</b> Offers secure card payment methods, ensuring trust and reliability in transactions.</li>
+ <li> <b>Search and Sort:</b> Sort by assignment difficulty level like hard, medium and easy </li>
 </ul>
-<li> <b>Confirmation:</b> First, you should make the payment. After the payment is successfully made, the admin will show the details and confirm the transaction. Once confirmed, it is finalized.</li>
+ <li> <b>Take and submit Assignment:</b> After Login student can take assignment and finally submit a pdf link</li>
+
+ <li> <b>Give Mark and feedback:</b>Examiner can show pdf file after submitting link by student. And then give mark and feedback, after giving mark and feedback student can see it</li>
+</ul>
+
 </ul>
 
 <h1>Special Features</h1>
 <ul>
-<li>Efficient contest oversight with multi-dashboard control for seamless management.
-</li>
-<li>Secure payments system, Booking System with Cancellation and Update Functionality.
-</li>
-<li>JWT Authentication for Secure Private Routes. User can find popular camp by searching.
-</li>
-<li>Upgraded conformation system where user pay first then after confirming by admin it confirmed.
-</li>
+<li>Backend-integrated search and filtering options enable quick and precise data access. </li>
+<li>Modify assignment after take it. Authentication system.Cancellation and Update Functionality. </li>
+<li>• User submit a pdf link then examiner can give mark and feedback, then user can see these.</li>
+
 </ul>
 
 <h1>Technologies Used</h1>
